@@ -1,0 +1,66 @@
+# KiloCode Ignore Patterns
+# This file specifies which files and directories should be excluded from semantic indexing
+# to improve performance and focus on code files rather than data files
+
+# Exclude data directories
+src/archive/
+bronze/
+gold/
+logs/
+references/
+silver/
+
+# Exclude common data file extensions in specific directories
+bronze/**/*.csv
+bronze/**/*.parquet
+bronze/**/*.json
+gold/**/*.parquet
+gold/**/*.json
+logs/**/*.log
+logs/**/*.err
+logs/**/*.out
+references/**/*.parquet
+references/**/*.json
+references/**/*.csv
+
+# Exclude large data files
+**/*.csv
+**/*.parquet
+**/*.snappy.parquet
+
+# Exclude cache and temporary files
+**/__pycache__/
+**/.DS_Store
+**/*.pyc
+**/*.pyo
+**/*.pyd
+
+# Exclude environment and virtual environment files
+.venv/
+.env
+**/venv/
+**/.venv/
+
+# Exclude notebook outputs
+notebooks/**/*.ipynb
+
+# Exclude model files
+models/**/*.npz
+models/**/*.h5
+models/**/*.pth
+
+# Exclude test data
+**/test_data/
+**/testdata/
+**/tests/fixtures/
+
+# Exclude build and distribution directories
+**/dist/
+**/build/
+**/*.egg-info/
+
+# Exclude IDE-specific files
+**/.vscode/
+**/.idea/
+**/*.swp
+**/*.swo
